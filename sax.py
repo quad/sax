@@ -105,7 +105,7 @@ class Ringer(dbus.service.Object):
         assert self.Invoke('PROTOCOL 7') == 'PROTOCOL 7'
 
     def call(self, phone_number):
-        with NamedTemporaryFile(dir=os.getcwd(), delete=False) as of:
+        with NamedTemporaryFile(suffix='.wav', dir=os.getcwd(), delete=False) as of:
             c = Call(self, phone_number)
             c.input = self.filename
             c.output = of.name
