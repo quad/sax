@@ -57,7 +57,7 @@ class Call(object):
             state = message[len(self.PREFIX_VAA_OUTPUT_STATUS):]
 
             if state == 'FALSE' and self.status not in self.CALL_STATES_DONE:
-                r = self.Invoke('SET CALL %s FINISHED' % (self.number))
+                r = self.Invoke('SET CALL %s STATUS FINISHED' % (self.number))
                 assert r == 'CALL %s STATUS FINISHED' % (self.number), r
         else:
             print "%s : %s" % (self.number, message)
