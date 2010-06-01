@@ -29,7 +29,7 @@ OK
     STATUS 11958: RINGING
     STATUS 11958: INPROGRESS
     11958 : INPUT FILE="/tmp/tmpJd9s42"
-    11958 : OUTPUT FILE="/home/scott/Projects/sax/tmpu82TmG"
+    11958 : OUTPUT FILE="/home/scott/Projects/sax/tmpu82TmG.wav"
     11958 : DURATION 1
     11958 : DURATION 2
     11958 : DURATION 3
@@ -40,3 +40,10 @@ Yup. Just give it some numbers to serenade.
 
     $ echo "+13107700023" | python sax.py sax.mp3
     ...
+
+Oh yeah:
+
+    $ play tmpu82TmG.wav
+    Playing WAVE 'tmpu82TmG.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+
+You can savor the response, forever.
